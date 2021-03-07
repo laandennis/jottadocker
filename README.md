@@ -1,6 +1,7 @@
 # jottadocker
 
-Available on docker hub as: [mxml/jottadocker](https://hub.docker.com/r/mxml/jottadocker)
+Available on docker hub as: [laandennis/jottadocker](https://hub.docker.com/r/laandennis/jottadocker)
+fork of [maaximal/jottadocker](https://hub.docker.com/r/maaximal/jottadocker)
 
 In order to persist the config add /var/lib/jottad as a mount or volume.
 
@@ -28,3 +29,21 @@ Units:
    5h30m     ( every 5 hours and 30 minutes )
 
 To add a [ignore file](https://docs.jottacloud.com/en/articles/1437235-ignoring-files-and-folders-from-backup-with-jottacloud-cli) mount it to /config/ignorefile
+
+
+my example docker-compose
+
+version: '3.9'
+services:
+    jotta:
+        container_name: jotta
+        image: laandennis/jottadocker
+        volumes:
+            - $DOCKERDIR/jotta:/var/lib/jottad
+#            - $DOCKERDIR:/backup/docker
+            - $MEDIADIR:/backup/media
+        environment:
+            - TZ=$TZ
+            - JOTTA_TOKEN=$JOTTA_TOKEN
+            - JOTTA_DEVICE=$JOTTA_DEVICE
+            - JOTTA_SCANINTERVAL=$JOTTA_SCANINTERVAL
