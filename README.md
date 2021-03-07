@@ -1,7 +1,7 @@
 # jottadocker
 
 Available on docker hub as: [laandennis/jotta-cli](https://hub.docker.com/r/laandennis/jotta-cli)\
-fork of [maaximal/jottadocker](https://hub.docker.com/r/maaximal/jottadocker)
+fork of [mxml/jottadocker](https://hub.docker.com/r/mxml/jottadocker)
 
 In order to persist the config add /var/lib/jottad as a mount or volume.
 
