@@ -51,3 +51,4 @@ services:
             - JOTTA_MAXUPLOADS=6
             - JOTTA_DOWNLOADRATE=0
             - JOTTA_UPLOADRATE=0
+
