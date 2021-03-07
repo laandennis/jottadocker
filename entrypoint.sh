@@ -77,6 +77,22 @@ fi
 echo "Setting scan interval"
 jotta-cli config set scaninterval $JOTTA_SCANINTERVAL
 
+# set download channels
+echo "Setting download channels"
+jotta-cli config set maxdownloads $JOTTA_MAXDOWNLOADS
+
+# set upload slots
+echo "Setting upload channels"
+jotta-cli config set maxuploads $JOTTA_MAXUPLOADS
+
+# set download rate
+echo "Setting download rate"
+jotta-cli config set downloadrate $JOTTA_DOWNLOADRATE
+
+# set upload rate
+echo "Setting upload rate"
+jotta-cli config set uploadrate $JOTTA_UPLOADRATE
+
 jotta-cli tail &
 
 R=0
