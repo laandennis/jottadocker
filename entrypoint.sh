@@ -93,16 +93,7 @@ jotta-cli config set downloadrate $JOTTA_DOWNLOADRATE
 echo "Setting upload rate"
 jotta-cli config set uploadrate $JOTTA_UPLOADRATE
 
+jotta-cli scan
 jotta-cli tail &
 
-R=0
-while [[ $R -eq 0 ]]
-do
-	sleep 15
-	jotta-cli status >/dev/null 2>&1
-        R=$?
-done
-
-echo "Exiting:"
 jotta-cli status
-exit 1
