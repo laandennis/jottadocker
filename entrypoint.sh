@@ -68,9 +68,9 @@ echo "Adding backups"
 for dir in /backup/* ; do if [ -d "${dir}" ]; then set +e && jotta-cli add /$dir && set -e; fi; done
 
 # load ignore file
-if [ -f /config/ignorefile ]; then
+if [ -f /var/lib/jottad/ignorefile ]; then
   echo "loading ignore file"
-  jotta-cli ignores set /config/ignorefile
+  jotta-cli ignores set /var/lib/jottad/ignorefile
 fi
 
 # set scan interval
