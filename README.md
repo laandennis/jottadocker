@@ -39,11 +39,15 @@ services:
         container_name: jotta
         image: laandennis/jottadocker
         volumes:
-            - $DOCKERDIR/jotta:/var/lib/jottad
-#            - $DOCKERDIR:/backup/docker
-            - $MEDIADIR:/backup/media
+            - /docker/jotta:/var/lib/jottad
+            - /docker:/backup/docker
+            - /media:/backup/media
         environment:
             - TZ=$TZ
             - JOTTA_TOKEN=$JOTTA_TOKEN
-            - JOTTA_DEVICE=$JOTTA_DEVICE
-            - JOTTA_SCANINTERVAL=$JOTTA_SCANINTERVAL
+            - JOTTA_DEVICE='nas'
+            - JOTTA_SCANINTERVAL=24h
+            - JOTTA_MAXDOWNLOADS=6
+            - JOTTA_MAXUPLOADS=6
+            - JOTTA_DOWNLOADRATE=0
+            - JOTTA_UPLOADRATE=0
