@@ -28,7 +28,7 @@ Units:
         10m       ( every 10 minutes )
         5h30m     ( every 5 hours and 30 minutes )
 
-To add a [ignore file](https://docs.jottacloud.com/en/articles/1437235-ignoring-files-and-folders-from-backup-with-jottacloud-cli) mount it to /config/ignorefile
+To add a [ignore file](https://docs.jottacloud.com/en/articles/1437235-ignoring-files-and-folders-from-backup-with-jottacloud-cli) create "ignorefile" in /var/lib/jottad 
 
 
 my example docker-compose
