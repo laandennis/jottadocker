@@ -18,14 +18,15 @@ Login using env variables:
 - JOTTA_UPLOADRATE: The upload rate (0=unlimited)
 - LOCALTIME: The [timezone file](https://packages.debian.org/sid/all/tzdata/filelist) in the docker image (e.g. Europe/Berlin)
 
-Units:\
+Units:
+
     download and upload rates:
-    - k,KB,kb = KiloByte ( 1000 bytes )
-    - m,MB,mb = MegaByte ( 1000 KiloBytes )
-    - etc
-scaninterval:\
-   - 10m       ( every 10 minutes )
-   - 5h30m     ( every 5 hours and 30 minutes )
+        k,KB,kb = KiloByte ( 1000 bytes )
+        m,MB,mb = MegaByte ( 1000 KiloBytes )
+        etc
+    scaninterval:
+        10m       ( every 10 minutes )
+        5h30m     ( every 5 hours and 30 minutes )
 
 To add a [ignore file](https://docs.jottacloud.com/en/articles/1437235-ignoring-files-and-folders-from-backup-with-jottacloud-cli) mount it to /config/ignorefile
 
